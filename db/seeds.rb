@@ -11,8 +11,8 @@ ivan = User.create(name: 'Иван')
 russian = Category.create(title: 'Русский')  
 english = Category.create(title: 'Английский')
 
-test1 = Test.create(title: 'Тест по русскому', level: 0, category_id: russian.id)
-test2 = Test.create(title: 'Тест по английскому', level: 1, category_id: english.id)
+test1 = Test.create(title: 'Тест по русскому', level: 0, category_id: russian.id, author_id: ivan.id)
+test2 = Test.create(title: 'Тест по английскому', level: 1, category_id: english.id, author_id: ivan.id)
 
 question1 = Question.create(body: 'Фонетика изучает', test_id: test1.id)
 question2 = Question.create(body: 'Сколько гласных звуков', test_id: test1.id)
@@ -38,5 +38,3 @@ answer1_for_questsion4 = Answer.create(body: 'were, were', question_id: question
 answer2_for_questsion4 = Answer.create(body: 'was, will be', question_id: question4.id) 
 answer3_for_questsion4 = Answer.create(body: 'am, are', question_id: question4.id, correct: true) 
 answer4_for_questsion4 = Answer.create(body: 'are, are', question_id: question4.id) 
-
-result = Result.create(user_id: ivan.id, test_id: test2.id)
