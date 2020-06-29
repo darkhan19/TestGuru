@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ivan = User.create(name: 'Иван')
+ivan = User.create(name: 'Иван', email: 'ivan@mail.ru', password: 'qwerty')
 
 russian = Category.create(title: 'Русский')  
 english = Category.create(title: 'Английский')
@@ -18,6 +18,7 @@ question1 = Question.create(body: 'Фонетика изучает', test_id: te
 question2 = Question.create(body: 'Сколько гласных звуков', test_id: test1.id)
 question3 = Question.create(body: '… you a doctor? – yes, I …', test_id: test2.id)
 question4 = Question.create(body: 'I … sorry. They … not at the office at the moment', test_id: test2.id)
+question5 = Question.create(body: 'Test for valid', test_id: test2.id)
 
 answer1_for_questsion1 = Answer.create(body: 'слово', question_id: question1.id)
 answer2_for_questsion1 = Answer.create(body: 'словосочетание', question_id: question1.id) 
